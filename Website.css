@@ -161,6 +161,13 @@ a{
   font-size: 20px;
 }
 
+marquee {
+    color: red;
+    font-size: 25px;
+    line-height: 50px;
+    
+}
+
 /* Website Layout Coding End here */
 
 
