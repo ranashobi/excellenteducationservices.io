@@ -1,62 +1,62 @@
 *{
     margin: 0;
     padding: 0;
-    /* list-style: none; */
     box-sizing: border-box;
     color: black;
+    
 }
 body{
-    width: 95%;
+    width: 99%;
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
+    background-color: darkgrey;
 }
 
 a{
     text-decoration: none;
+    color: white;
 }
 /* Website Layout Coding start from here */
 #background-div{
+    width: 100%;
     background-color:white;
     padding: 0;
     margin: 0;
-    border: 10px solid darkslategray;
-    border-radius: 15px;
+    border: 10px solid black;
+    border-radius: 25px;
     
 }
 #super{
-    
-    /* width: 99%; */
-    /* margin: auto; */
-    /* margin: 1% auto; */
-    /* height: 99%; */
-    /* border: none; */
+    width: 100%;
+    background-color: darkgrey;
     box-sizing: border-box;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 180px 50px 150px 350px 500px 50px 180px;
-    gap: 10px;
+    grid-template-rows: 200px 50px 150px 350px 500px 50px 180px;
+    gap: 5px;
 
 
 }
 .box{
    
-    padding: 15px 15px;
+    padding: 5px 5px;
     border-radius: 15px;
     
 
 }
 #box-1{
-    /* background-color: green; */
     grid-column: 1/5;
     grid-row: 1/2;
     background-color: black;
     font-size: 25px;
     padding: 0;
+    position: relative;
 }
 #box-1>h1{
     padding-left: 100px;
     color: white;
+    
     
 }
 #box-1>h1:hover{
@@ -74,21 +74,22 @@ a{
     padding-left: 350px;
 }
 #box-2{
-    /* background-color: yellow; */
     grid-column: 1/5;
     grid-row: 2/3;    
     border: none;
     padding: 0;
-    background-color: transparent;
+    background-color: black;
+    color: white;
 
 }
 #box-3{
-    background-color: lightsteelblue;
+    background-color: black;
         grid-column: 1/4;
         grid-row: 3/4;
 
 }
 #box-4{
+    /* Main data box */
     background-color: lightslategray;
        grid-column: 1/4;
         grid-row: 4/6;
@@ -97,7 +98,6 @@ a{
 
 }
 #box-4>ul {
-    /* order: 1px solid red; */
     display: grid;
     grid-template-columns: 1fr;
     /* grid-template-rows: repeat(10,50px); */
@@ -110,7 +110,7 @@ a{
     color: white;
     font-family: Arial;
     font-size: 20px;
-    background-color: darkslategrey;    
+    background-color: black;    
     line-height: 50px;
     padding-left: 10px;
     list-style:inside;
@@ -118,12 +118,14 @@ a{
 }
 
 #box-5{
-    background-color: darkslategrey;
+    /* side box for google ad */
+    background-color: black;
        grid-column: 4/5;
        grid-row: 3/5;
 }
 #box-6{
-    background-color: darkslategrey;
+    /* side box for google ad */
+    background-color: black;
         grid-column: 4/5;
         grid-row: 5/6 ;
 }
@@ -151,10 +153,10 @@ a{
     border-bottom-right-radius: 10px;
 }
 #box-7{
-    
+    padding: 15px;
     grid-column: 1/5;
     grid-row: 7/8;
-  background-color: darkslategray;
+  background-color: black;
   color: white;
   font-size: 20px;
 }
@@ -183,104 +185,82 @@ a{
 /* List Menu Coding start from here */
 
 
-
-.menu{
-    width: 100%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 50px;
-    gap: 5px;
-    text-align: center;
-    line-height:50px;
+#box-1>.menu{
     box-sizing: border-box;
+    width:98%;
+    display: inline-flex;
+    font-size: 20px;
+    justify-content: right;
+    background-color: black;
+    color: white;
+    position: absolute;
+    bottom: 3%;
+    right: 0.4%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+}
+.menu>ul{
+    display: flex;
+    list-style: none;
+/* border: 1px solid red; */
+border-bottom-right-radius: 15px;
+gap: 5px;
+}
+.menu>ul>li{
+    padding: 10px 100px;
+    position: relative;
+    border: 1px solid rgb(125, 122, 122);
+    border-radius: 15px;
+    color: white;
     
-    }
-    .menu>li{
-        position: relative;
-        /* width: 100%; */
-        background-color: darkslategray;
-        color: white ;
-        border: 2px solid black;
-        box-sizing: border-box;
-        font-size: 2vw;
-        border-radius: 15px;
-        list-style: none;
-
-    }
-    .submenu{
-        position: absolute;
-        top: 120%;
-        width: 100%;
-        left: 100%;
-        opacity: 0;
-        visibility: hidden;
-        display: inline-flex;
-        flex-direction: column;
-        gap: 5px;
-        
-    }
-    #submenuid{
-        position: absolute;
-        top: 100%;
-        width: 100%;
-        left: -100%;
-        opacity: 0;
-        visibility: hidden;
-        line-height: 50px;
-    }
+}
+.List1ul{
+    position: absolute;
+    top: 102%;
+    opacity: 0;
+    visibility: hidden;
+    left: 100%;
+    width: 100%;
+    list-style: none;
+    border-radius: 15px;
+    gap: 2px;
+    display: inline-flex;
+    flex-direction: column;
+}
+#lastlist{
+    position: absolute;
+    top: 102%;
+    opacity: 0;
+    visibility: hidden;
+    left: -100%;
+    width: 100%;
+}
+                           .menu>ul>li:hover .List1ul{opacity: 1;
+                                                      visibility: visible;
+                                                      left: 0%;
+                                                      transition: 1s;
+                                                        /* background-color: lightcoral; */
+                                                        }
+                                                    
+                                                        .menu>ul>li:hover #lastlist{opacity: 1;
+                                                            visibility: visible;
+                                                            left: 0%;
+                                                            transition: 1s;
+                                                            /* background-color: green; */
+      
+                                                              }
+.List1ul>li{
+    border: 1px solid black;
+    padding: 10px 10px;
+    border-radius: 15px;
+    background-color: rgb(13, 115, 179);
     
-    .submenu>li{
-        width: 100%;
-        border-radius: 15px;
-        background-color: darkgrey;
-        list-style: none;
-        font-size: 2vw;
-        /* border-left: 2px solid black;
-        border-bottom: 2px solid black; */
-        border: 1px solid black;
-        
-    }
-    
-    .menu>li:hover .submenu{
-        
-        opacity: 1;
-        visibility: visible;
-        left: 0%;
-        transition: 1s;
-        
-    }
-    .menu>li:hover #submenuid{
-        opacity: 1;
-        visibility: visible;
-        left: 0%;
-        transition: 1s;
-        
-    }
-    #submenuid>.menulastlist{
-        height: 50px;
-        border-left: none;
-        border-right: 2px solid black;
-    }
-    /* List menu coding End here */
+}
 
+/* List code End */
 
-
-
-    /* new coding  */
-    
-
-    #lastlistcontact a{
-        color: white;
-
-    }
-
-
-
-    /* coding inside box 4 Main data ul */
-
-
-
+ 
 
 
 
