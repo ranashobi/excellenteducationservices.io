@@ -60,7 +60,7 @@ a{
     
 }
 #box-1>h1:hover{
-    color: black;
+    color: rgb(1, 133, 227);
     transition: 2s;
     padding-left:150px ;
 }
@@ -187,7 +187,7 @@ a{
 
 #box-1>.menu{
     box-sizing: border-box;
-    width:98%;
+    /* width:98%; */
     display: inline-flex;
     font-size: 20px;
     justify-content: right;
@@ -198,17 +198,30 @@ a{
     right: 0.4%;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-
+    /* border: 1px solid red; */
 }
+
 .menu>ul{
     display: flex;
+    /* justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0; */
     list-style: none;
 /* border: 1px solid red; */
 border-bottom-right-radius: 15px;
 gap: 5px;
 }
+
+
 .menu>ul>li{
-    padding: 10px 100px;
+    width: 200px;
+    height: 50px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: relative;
     border: 1px solid rgb(125, 122, 122);
     border-radius: 15px;
@@ -235,6 +248,10 @@ gap: 5px;
     visibility: hidden;
     left: -100%;
     width: 100%;
+}
+.menu>ul>li:hover{
+    background-color: darkred;
+    transition: 1s;
 }
                            .menu>ul>li:hover .List1ul{opacity: 1;
                                                       visibility: visible;
