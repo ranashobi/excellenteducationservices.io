@@ -1,0 +1,310 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* list-style: none; */
+    box-sizing: border-box;
+    color: black;
+}
+body{
+    width: 95%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+/* Website Layout Coding start from here */
+#background-div{
+    background-color:white;
+    padding: 0;
+    margin: 0;
+    border: 10px solid darkslategray;
+    border-radius: 15px;
+    
+}
+#super{
+    
+    /* width: 99%; */
+    /* margin: auto; */
+    /* margin: 1% auto; */
+    /* height: 99%; */
+    /* border: none; */
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 180px 50px 150px 350px 500px 50px 180px;
+    gap: 10px;
+
+
+}
+.box{
+   
+    padding: 15px 15px;
+    border-radius: 15px;
+    
+
+}
+#box-1{
+    /* background-color: green; */
+    grid-column: 1/5;
+    grid-row: 1/2;
+    background-color: black;
+    font-size: 25px;
+    padding: 0;
+}
+#box-1>h1{
+    padding-left: 100px;
+    color: white;
+    
+}
+#box-1>h1:hover{
+    color: black;
+    transition: 2s;
+    padding-left:150px ;
+}
+#box-1>h2{
+    color: dimgray;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+#box-1>h3{
+    color: dimgray;
+    padding-left: 350px;
+}
+#box-2{
+    /* background-color: yellow; */
+    grid-column: 1/5;
+    grid-row: 2/3;    
+    border: none;
+    padding: 0;
+    background-color: transparent;
+
+}
+#box-3{
+    background-color: lightsteelblue;
+        grid-column: 1/4;
+        grid-row: 3/4;
+
+}
+#box-4{
+    background-color: lightslategray;
+       grid-column: 1/4;
+        grid-row: 4/6;
+        overflow: hidden;
+        /* overflow-y: scroll; */
+
+}
+#box-4>ul {
+    /* order: 1px solid red; */
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-template-rows: repeat(10,50px); */
+    grid-auto-rows: 50px;
+    gap: 10px;
+
+}
+#box-4>ul li{
+    border-bottom: 1px solid white;
+    color: white;
+    font-family: Arial;
+    font-size: 20px;
+    background-color: darkslategrey;    
+    line-height: 50px;
+    padding-left: 10px;
+    list-style:inside;
+    border-radius: 10px;
+}
+
+#box-5{
+    background-color: darkslategrey;
+       grid-column: 4/5;
+       grid-row: 3/5;
+}
+#box-6{
+    background-color: darkslategrey;
+        grid-column: 4/5;
+        grid-row: 5/6 ;
+}
+#pagination{
+    grid-column: 1/5;
+    grid-row: 6/7;
+    margin: 0;
+    display: inline-flex;
+    /* align-items: center; */
+    
+    background-color: black;
+    border-radius: 10px;
+}
+
+
+#prev{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: darkred;
+    color: white;
+}
+#next{
+    background-color: darkorange;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#box-7{
+    
+    grid-column: 1/5;
+    grid-row: 7/8;
+  background-color: darkslategray;
+  color: white;
+  font-size: 20px;
+}
+
+/* Website Layout Coding End here */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* List Menu Coding start from here */
+
+
+
+.menu{
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px;
+    gap: 5px;
+    text-align: center;
+    line-height:50px;
+    box-sizing: border-box;
+    
+    }
+    .menu>li{
+        position: relative;
+        /* width: 100%; */
+        background-color: darkslategray;
+        color: white ;
+        border: 2px solid black;
+        box-sizing: border-box;
+        font-size: 2vw;
+        border-radius: 15px;
+        list-style: none;
+
+    }
+    .submenu{
+        position: absolute;
+        top: 120%;
+        width: 100%;
+        left: 100%;
+        opacity: 0;
+        visibility: hidden;
+        display: inline-flex;
+        flex-direction: column;
+        gap: 5px;
+        
+    }
+    #submenuid{
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        left: -100%;
+        opacity: 0;
+        visibility: hidden;
+        line-height: 50px;
+    }
+    
+    .submenu>li{
+        width: 100%;
+        border-radius: 15px;
+        background-color: darkgrey;
+        list-style: none;
+        font-size: 2vw;
+        /* border-left: 2px solid black;
+        border-bottom: 2px solid black; */
+        border: 1px solid black;
+        
+    }
+    
+    .menu>li:hover .submenu{
+        
+        opacity: 1;
+        visibility: visible;
+        left: 0%;
+        transition: 1s;
+        
+    }
+    .menu>li:hover #submenuid{
+        opacity: 1;
+        visibility: visible;
+        left: 0%;
+        transition: 1s;
+        
+    }
+    #submenuid>.menulastlist{
+        height: 50px;
+        border-left: none;
+        border-right: 2px solid black;
+    }
+    /* List menu coding End here */
+
+
+
+
+    /* new coding  */
+    
+
+    #lastlistcontact a{
+        color: white;
+
+    }
+
+
+
+    /* coding inside box 4 Main data ul */
+
+
+
+
+
+
+
+
+
+/* Pagination code start */
+.pagination {
+    display: inline-block;
+}
+
+.pagination button {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.pagination button.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* pagination code end */
