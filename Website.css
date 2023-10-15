@@ -6,10 +6,10 @@
     
 }
 body{
-    width: 99%;
+    width: 100%;
     margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    /* margin-top: 20px; */
+    /* margin-bottom: 20px; */
     background-color: darkgrey;
 }
 
@@ -24,7 +24,7 @@ a{
     padding: 0;
     margin: 0;
     border: 10px solid black;
-    border-radius: 25px;
+    /* border-radius: 25px; */
     
 }
 #super{
@@ -35,7 +35,7 @@ a{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 200px 50px 150px 350px 500px 50px 180px;
     gap: 5px;
-
+    border-radius: 0px;
 
 }
 .box{
@@ -48,42 +48,70 @@ a{
 #box-1{
     grid-column: 1/5;
     grid-row: 1/2;
-    background-color: black;
+    background: linear-gradient(black, white, black);
     font-size: 25px;
     padding: 0;
     position: relative;
 }
-#box-1>h1{
-    padding-left: 100px;
+
+/* Logo setting start */
+.Logo-setting{
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+
+}
+.logoimg-div img{
+    width: 200px;
+    border-radius: 400px;
+}
+.header-text{
     color: white;
+    font-family: Arial;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
     
-    
+
 }
-#box-1>h1:hover{
-    color: rgb(1, 133, 227);
-    transition: 2s;
-    padding-left:150px ;
+#ht-1{
+    color: black;
+    border: none;
+    font-size: 20px;
+    padding: 0px;
+
 }
-#box-1>h2{
-    color: dimgray;
-    padding-left: 15px;
-    padding-top: 10px;
+#ht-2{
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    background:linear-gradient(black,goldenrod,black,black);
+
 }
-#box-1>h3{
-    color: dimgray;
-    padding-left: 350px;
+#ht-3{
+    color: darkred;
+    font-size: 18px;
+    /* border: none; */
+    padding: 0px;
 }
+/* Logo Setting end */
+
+
+
 #box-2{
     grid-column: 1/5;
     grid-row: 2/3;    
     border: none;
     padding: 0;
-    background-color: black;
+    background: linear-gradient(black, goldenrod, black);
     color: white;
 
 }
 #box-3{
-    background-color: black;
+        background: linear-gradient(darkgray,black);
         grid-column: 1/4;
         grid-row: 3/4;
 
@@ -110,7 +138,7 @@ a{
     color: white;
     font-family: Arial;
     font-size: 20px;
-    background-color: black;    
+    background-color: teal;    
     line-height: 50px;
     padding-left: 10px;
     list-style:inside;
@@ -119,13 +147,13 @@ a{
 
 #box-5{
     /* side box for google ad */
-    background-color: black;
+    background: linear-gradient(black,darkgray);
        grid-column: 4/5;
        grid-row: 3/5;
 }
 #box-6{
     /* side box for google ad */
-    background-color: black;
+    background: linear-gradient(darkgray,black);
         grid-column: 4/5;
         grid-row: 5/6 ;
 }
@@ -156,13 +184,15 @@ a{
     padding: 15px;
     grid-column: 1/5;
     grid-row: 7/8;
-  background-color: black;
-  color: white;
+  background: linear-gradient(black,white,black);
+  color: black;
   font-size: 20px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 
 marquee {
-    color: red;
+    color: white;
     font-size: 25px;
     line-height: 50px;
     
@@ -198,27 +228,20 @@ marquee {
     display: inline-flex;
     font-size: 20px;
     justify-content: right;
-    background-color: black;
+    background-color: transparent;
     color: white;
     position: absolute;
     bottom: 3%;
     right: 0.4%;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    /* border: 1px solid red; */
+    border-radius: 15px;
 }
 
 .menu>ul{
     display: flex;
-    /* justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 0;
-    padding: 0; */
     list-style: none;
-/* border: 1px solid red; */
 border-bottom-right-radius: 15px;
 gap: 5px;
+z-index: 1;
 }
 
 
@@ -232,7 +255,7 @@ gap: 5px;
     position: relative;
     border: 1px solid rgb(125, 122, 122);
     border-radius: 15px;
-    color: white;
+    color: darkgray;
     
 }
 .List1ul{
@@ -257,8 +280,8 @@ gap: 5px;
     width: 100%;
 }
 .menu>ul>li:hover{
-    background-color: darkred;
-    transition: 1s;
+    background-color: darkgreen;
+    transition: 2s;
 }
                            .menu>ul>li:hover .List1ul{opacity: 1;
                                                       visibility: visible;
